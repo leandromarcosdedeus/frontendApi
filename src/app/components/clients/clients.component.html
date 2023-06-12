@@ -1,0 +1,59 @@
+<div class="container">
+    <h2 class="mx-3">Cadastrar</h2>
+  
+    <form (ngSubmit)="insertData" class="mx-3">
+      <div class="form-group">
+        <label for="name">Nome</label>
+        <input type="text" class="form-control" id="name" [(ngModel)]="client.nome" name="nome">
+      </div>
+      <div class="form-group">
+        <label for="name">Apelido</label>
+        <input type="text" class="form-control" id="Apelido" [(ngModel)]="client.apelido" name="apelido">
+      </div>
+      <div class="form-group">
+        <label for="name">Time</label>
+        <input type="text" class="form-control" id="Time" [(ngModel)]="client.time" name="time">
+      </div>
+      <div class="form-group">
+        <label for="CPF">CPF</label>
+        <input type="text" class="form-control" id="CPF" [(ngModel)]="client.CPF" name="CPF">
+      </div>
+      <div class="form-group">
+        <label for="name">Hobbie</label>
+        <input type="text" class="form-control" id="hobbie" [(ngModel)]="client.hobbie" name="hobbie">
+      </div>
+      <div class="form-group">
+        <label for="name">Cidade</label>
+        <input type="text" class="form-control" id="cidade" [(ngModel)]="client.cidade" name="cidade">
+      </div>
+      
+      <button type="button" (click)="insertData()" class="btn btn-primary">Cadastrar</button>
+    </form>
+    <br>
+  </div>
+<table class="table">
+    <thead>
+        <tr>
+            <th scope="col">#id</th>
+            <th scope="col">nome</th>
+            <th scope="col">apelido</th>
+            <th scope="col">time</th>
+            <th scope="col">cpf</th>
+            <th scope="col">hobbie</th>
+            <th scope="col">cidade</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr *ngFor="let client of clients">
+            <td>{{ client.id }} </td>
+            <td>{{ client.nome }} </td>
+            <td>{{ client.apelido }} </td>
+            <td>{{ client.time }} </td>
+            <td>{{ client.cpf }} </td>
+            <td>{{ client.hobbie }} </td>
+            <td>{{ client.cidade }} </td>
+            <td><button class="btn btn-warning" routerLink="edit/{{client.id}}">Editar</button></td>
+            <td><button class="btn btn-danger btn-sm" (click)="deleteData(client.id)">Deletar</button></td>
+        </tr>
+    </tbody>
+</table>
