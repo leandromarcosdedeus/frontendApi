@@ -1,0 +1,16 @@
+
+<form (ngSubmit)="updateCity" class="mx-3">
+    <div class="form-group">
+      <label for="name">Nome</label>
+      <input type="text" class="form-control" id="name" [(ngModel)]="city.nome" name="nome">
+    </div>
+    <div class="form-group">
+      <label for="name">Estado</label>
+      <input type="text" class="form-control" id="estado" [(ngModel)]="city.estado" name="estado">
+    </div>
+    <div class="form-group">
+      <label for="name">Quantidade de habitantes</label>
+      <input type="text" class="form-control" id="quantidade_de_habitantes" [(ngModel)]="city.quantidade_de_habitantes" name="time">
+    </div>
+    <button type="button" (click)="updateCity()" class="btn btn-primary">Atualizar</button>
+  </form>

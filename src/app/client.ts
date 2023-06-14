@@ -3,6 +3,6 @@ export class Client{
     'apelido': any;
     'time': any;
     'CPF': any;
-    'hobbie': any
+    'hobbie': any;
     'cidade': any;
 } 

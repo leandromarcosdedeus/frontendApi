@@ -8,10 +8,16 @@ import { NavbarComponent } from './components/navbar/navbar.component';
 import { HttpClientModule } from '@angular/common/http';
 import { FormsModule } from '@angular/forms';
 import { ClientEditComponent } from './components/client-edit/client-edit.component';
+import { CitiesComponent } from './components/cities/cities.component';
+import { CityEditComponent } from './components/city-edit/city-edit.component';
+import { HomeComponent } from './home/home.component';
 
 const appRoutes: Routes = [
-  {path: '', component: ClientsComponent},
-  {path: 'edit/:id', component:ClientEditComponent}
+  {path: '', component: HomeComponent},
+  {path: 'edit/:id', component:ClientEditComponent},
+  {path: 'clients', component: ClientsComponent},
+  {path: 'cities', component:CitiesComponent},
+  {path: 'editCity/:id', component:CityEditComponent}
 
 ]
 
@@ -20,7 +26,10 @@ const appRoutes: Routes = [
     AppComponent,
     ClientsComponent,
     NavbarComponent,
-    ClientEditComponent
+    ClientEditComponent,
+    CitiesComponent,
+    CityEditComponent,
+    HomeComponent
   ],
   imports: [
     BrowserModule,

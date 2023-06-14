@@ -1,0 +1,39 @@
+<div class="container">
+    <h1 class="mx-3">Relatórios</h1>
+    <br><br>
+    <h3>Cidade com maior número de habitantes </h3>
+  </div>
+<table class="table">
+    <thead>
+        <tr>
+            <th scope="col">#id</th>
+            <th scope="col">nome</th>
+            <th scope="col">estado</th>
+            <th scope="col">Quantidade de habitantes</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr *ngFor="let city of cities">
+            <td>{{ city.id }} </td>
+            <td>{{ city.nome }} </td>
+            <td>{{ city.estado }} </td>
+            <td>{{ city.quantidade_de_habitantes }} </td>
+        </tr>
+    </tbody>
+</table>
+<table class="table">
+    <thead>
+        <tr>
+
+            <th scope="col">Time</th>
+            <th scope="col">Quantidade de torcedores</th>
+ 
+        </tr>
+    </thead>
+    <tbody>
+        <tr *ngFor="let client of clients">
+            <td>{{ client.time }} </td>
+            <td>{{ client.values }} </td>
+         </tr>
+    </tbody>
+</table>

@@ -24,7 +24,7 @@
       </div>
       <div class="form-group">
         <label for="name">Cidade</label>
-        <input type="text" class="form-control" id="cidade" [(ngModel)]="client.cidade" name="cidade">
+        <input type="text" class="form-control" id="cidade_id" [(ngModel)]="client.cidade" name="cidade_id">
       </div>
       
       <button type="button" (click)="insertData()" class="btn btn-primary">Cadastrar</button>
@@ -49,9 +49,9 @@
             <td>{{ client.nome }} </td>
             <td>{{ client.apelido }} </td>
             <td>{{ client.time }} </td>
-            <td>{{ client.cpf }} </td>
+            <td>{{ client.CPF }} </td>
             <td>{{ client.hobbie }} </td>
-            <td>{{ client.cidade }} </td>
+            <td>{{ client.cidade}} </td>
             <td><button class="btn btn-warning" routerLink="edit/{{client.id}}">Editar</button></td>
             <td><button class="btn btn-danger btn-sm" (click)="deleteData(client.id)">Deletar</button></td>
         </tr>
